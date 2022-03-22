@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+  
+    "name": "Heisere Trolle",
+    "version": "1.0",
+    "description": "Versteckt den Link zum Kommentarbereich von Artikeln auf heise.de. Quasi ein Mental Health Projekt.",
+    "homepage_url": "https://github.com/dwitthold/HeisereTrolle",
+  
+    "icons": {
+      "48": "icons/troll.svg",
+      "96": "icons/troll.svg"
+    },
+
+    "permissions": [
+      "activeTab"
+    ],
+  
+    "content_scripts": [
+      {
+        "matches": ["*://www.heise.de/*"],
+        "js": ["content_scripts/hide_trolls.js"]
+      }
+    ]
+}
